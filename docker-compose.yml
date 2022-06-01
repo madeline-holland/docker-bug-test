@@ -1,0 +1,6 @@
+services:
+  test:
+    image: nginx
+    volumes:
+      - ./out:/tmp/out
+      - ./test.md:/tmp/test.md
