@@ -14,9 +14,12 @@ Is there a more elegant way to refresh the hardlink without restarting the conta
 
 ### Usage: 
 `git clone` this repository.
+
 Run `test.sh`
 
+
 This was first noticed on a M1 Mac with Docker Desktop, and I replicated it on my Fedora 36 workstation.
+
 
 Output of my Docker info:
 ```
