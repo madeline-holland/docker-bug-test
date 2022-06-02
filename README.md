@@ -5,7 +5,7 @@ A simple test of some odd behavior exhibited by Docker / Docker compose paired w
 When using `git checkout -- <file>` the file on the inside of the container loses its hardlink, breaking things unexpectedly.
  - This is most prominent when working with a configuration that is passed in, like Drupal's `composer.json` which may need to be refreshed from a repository.
  - Interestingly, in the original repository I was testing this in moving the file does *not* make it lose its link when moved back, while with this test script it does.
- - When running `git checkout -- <file>` from a shell outside the container inside a folder that is passed through into the container does not produce this behavior.
+ - Running `git checkout -- <file>` from a shell outside the container inside a folder that is passed through into the container does not produce this behavior.
  - A workaround to fix the link is to restart the container with `docker compose restart` or similar.
  - This seems to be related to, but not the same as [this issue in moby's repository](https://github.com/docker/for-win/issues/5530).
 
